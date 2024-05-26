@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+<<<<<<< Updated upstream
     "build": "npm install"
+=======
+    "build":"npm i"
+>>>>>>> Stashed changes
   },
   "author": "",
   "license": "ISC",
