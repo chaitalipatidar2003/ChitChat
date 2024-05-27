@@ -3,6 +3,8 @@ import { Server } from 'socket.io';
 const io = new Server(9000, {
     cors: {
         origin: 'https://chitchat-bjfe.onrender.com',
+        methods: ["GET", "POST"],
+        credentials: true
     }, 
 })
 
