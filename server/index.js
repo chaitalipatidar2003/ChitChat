@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 
 import Connection from './database/db.js';
 import Routes from './routes/Routes.js';
-
 const path = requre("path") ;
 
 
@@ -28,8 +27,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/', Routes);
 
-app.use(express.static(path.join(_dirname,"/client/dist")));
 
- app.get("", (req,res)=>{
-     res.sendFile(path.join(_dirname,"client","dist","index.html"));
- })
+app.use(express.static(path.join(_dirname,"/client/build")));
+
+app.get("*", (req,res)=>{
+    res.sendFile(path.join(_dirname,"client","build","index.html"));
+})
