@@ -24,7 +24,12 @@ app.listen(PORT, () => console.log(`Server is running successfully on PORT ${POR
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://chitchat-bjfe.onrender.com'
+}));
+
+
 app.use('/', Routes);
 
 
