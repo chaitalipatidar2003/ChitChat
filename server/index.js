@@ -11,7 +11,7 @@ const path = requre("path") ;
 dotenv.config();
 const app = express();
 
-const PORT = 8000;
+// const PORT = 8000;
 
 const _dirname= path.resolve();
 
