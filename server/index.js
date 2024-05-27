@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 import Connection from './database/db.js';
 import Routes from './routes/Routes.js';
-const path = requre("path") ;
+import path from 'path';
 
 
 dotenv.config();
