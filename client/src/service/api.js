@@ -1,7 +1,7 @@
   
 import axios from 'axios';
 
-const url = 'https://chitchat-bjfe.onrender.com/';
+const url = 'https://chitchat-bjfe.onrender.com';
 
 export const addUser = async (data) => {
     try {
