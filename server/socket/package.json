@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-<<<<<<< Updated upstream
-    "build": "npm install"
+    "build":"npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    <<<<<<< Updated upstream
+   
 =======
     "build":"npm i"
 >>>>>>> Stashed changes
