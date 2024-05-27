@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-<<<<<<< Updated upstream
-    "build": "npm install"
+    "build":"npm install"
+    <<<<<<< Updated upstream
+   
 =======
     "build":"npm i"
 >>>>>>> Stashed changes
