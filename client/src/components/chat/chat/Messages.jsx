@@ -55,7 +55,7 @@ const Messages = ({ person, conversation }) => {
                 createdAt: Date.now()
             })
         })
-    }, []);
+    }, [setIncomingMessage]);
 
     useEffect(() => {
         const getMessageDetails = async () => {
