@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node mern server\index.js",
+    "start": "node mern server/index.js",
     "build":"npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix client && npm run build --prefix client"
   },
   "author": "",
