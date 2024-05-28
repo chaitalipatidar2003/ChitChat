@@ -1,28 +1,13 @@
+import { createServer } from "http";
 import { Server } from 'socket.io';
-import  {  createServer } from 'http'
-import express from 'express'
-import cors from "cors"
 
+const httpServer = createServer();
 
-app.use(cors({
-    origin: 'https://chitchat-bjfe.onrender.com',
-    methods: ['POST', 'GET', 'PUT', 'HEAD', 'PATCH'],
-}));
-
-
-const io = new Server(server, {
+const io = new Server(httpServer, {
     cors: {
-        origin: 'https://chitchat-bjfe.onrender.com',
-        method:"POST,GET,PUSH,HEAD,PATCH",
-      
+        origin: 'https://chitchat-bjfe.onrender.com/',
     }, 
 })
-
-const app=express();
-const server=createServer(app);
-
-
-
 
 
 let users = [];
@@ -61,3 +46,5 @@ io.on('connection',  (socket) => {
         io.emit('getUsers', users);
     })
 })
+
+httpServer.listen(3000);
