@@ -16,7 +16,7 @@ const AccountProvider = ({children}) => {
     const socket = useRef();
 
     useEffect(() => {
-        socket.current = io(httpServer);
+        socket.current = io("https://chitchat-bjfe.onrender.com/");
     }, [])
 
     return (
