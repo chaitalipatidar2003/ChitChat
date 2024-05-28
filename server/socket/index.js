@@ -3,13 +3,12 @@ import  {  createServer } from 'http'
 import express from 'express'
 import cors from "cors"
 
-const app=express();
-const server=createServer(app);
 
 app.use(cors({
     origin: 'https://chitchat-bjfe.onrender.com',
     methods: ['POST', 'GET', 'PUT', 'HEAD', 'PATCH'],
 }));
+
 
 const io = new Server(server, {
     cors: {
@@ -18,6 +17,12 @@ const io = new Server(server, {
       
     }, 
 })
+
+const app=express();
+const server=createServer(app);
+
+
+
 
 
 let users = [];
