@@ -1,10 +1,21 @@
 import { Server } from 'socket.io';
+import  {  createServer } from 'http'
+import express from 'express'
+import cors from "cors"
 
-const io = new Server(9000, {
+const app=express();
+const server=createServer(app);
+
+app.use(cors({
+    origin: 'https://chitchat-bjfe.onrender.com',
+    methods: ['POST', 'GET', 'PUT', 'HEAD', 'PATCH'],
+}));
+
+const io = new Server(server, {
     cors: {
         origin: 'https://chitchat-bjfe.onrender.com',
-        methods: ["GET", "POST"],
-        credentials: true
+        method:"POST,GET,PUSH,HEAD,PATCH",
+      
     }, 
 })
 
