@@ -1,13 +1,17 @@
-import { createServer } from "http";
+import { createServer } from 'http';
 import { Server } from 'socket.io';
+import express from 'express';
 
-const httpServer = createServer();
+const app = express();
+const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
     cors: {
-        origin: 'https://chitchat-bjfe.onrender.com/',
-    }, 
-})
+        origin: 'https://chitchat-bjfe.onrender.com', 
+        methods: ["GET", "POST"],
+        credentials: true
+    }
+});
 
 
 let users = [];
